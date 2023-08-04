@@ -1,0 +1,176 @@
+{
+    "messageMeta": {
+        "type": "metadata",
+        "body": {
+            "segment": "mass",
+            "operationSystem": "IOS",
+            "am_version": "12.26.0",
+            "kill_list": false,
+            "kc_segment": "AFFLUENT",
+            "critic": false,
+            "os_version": "16.3",
+            "channelApp": "AM",
+            "opinion_maker": false,
+            "staff": true,
+            "small_city": false,
+            "mortgagee": false,
+            "direction": "standard",
+            "sub-segment": "Affluent без ПУ"
+        }
+    },
+    "nlpResponse": {
+        "determIntents": [
+            {
+                "intent": "default_transfees_faq",
+                "confidence": 0.982222400384357,
+                "entities": {
+                    "commission": "Комиссия",
+                    "transfer_money": "Перевести",
+                    "rubles": "Рубли",
+                    "card": "Карта",
+                    "bank_name": "Сбербанк"
+                }
+            }
+        ]
+    },
+    "responses": {
+        "type": "assembly",
+        "children": [
+            {
+                "type": "message",
+                "bubbleId": "5e03bcd3-eb88-4992-891f-2a22cf48e9a8",
+                "body": {
+                    "text": "💳 Комиссия за перевод с кредитки по номеру карты — 5,9% + 150 ₽.\nКомиссия списывается даже внутри банка и при переводе собственных средств.\nПо номеру телефона — 5,9% + 150 ₽."
+                }
+            },
+            {
+                "type": "message",
+                "bubbleId": "2a3eb4d0-7c11-43cf-afdd-c1b0643e6b1e",
+                "body": {
+                    "text": "💳 Комиссия за перевод с дебетовой карты по номеру карты — 1,95%, не меньше 30 ₽. Внутри банка все переводы с дебетовой карты бесплатны.\nБез комиссии можно перевести по номеру телефона. До 100 000 ₽ в месяц бесплатно, свыше — 0,5%, максимум 1500 ₽.\nДля этого получателю нужно подключить СБП.\nЕсли подключить услугу **Бесплатные переводы** — комиссии не будет. Подключение услуги зависит от пакета услуг — выберите **Мой тариф**, чтобы узнать об услуге в вашем тарифе.\n❗ За пополнение карты другого банка в их сервисе с нашей карты — 1,95%, не меньше 30 ₽."
+                }
+            },
+            {
+                "type": "chips",
+                "children": [
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "👍",
+                            "id": "finger_up",
+                            "chipParams": {
+                                "intentName": "finger_intent",
+                                "payload": {
+                                    "entities": {
+                                        "finger": "up"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "👎",
+                            "id": "finger_down",
+                            "chipParams": {
+                                "intentName": "finger_intent",
+                                "payload": {
+                                    "entities": {
+                                        "finger": "down"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Мой тариф",
+                            "id": "killeroffer_tarif",
+                            "chipParams": {
+                                "intentName": "account_packageservice_info"
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Сделать перевод",
+                            "id": "do_a_transfer",
+                            "chipParams": {
+                                "intentName": "card_transfer_info"
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Лимиты переводов",
+                            "id": "transfer_limits",
+                            "chipParams": {
+                                "intentName": "default_limit_info",
+                                "payload": {
+                                    "entities": {
+                                        "transfer_money": "Перевести"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Сроки переводов",
+                            "id": "transfer_times",
+                            "chipParams": {
+                                "intentName": "account_transtime_faq"
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Как подключить СБП",
+                            "id": "transphone_enable",
+                            "chipParams": {
+                                "intentName": "account_transphone_enable_faq"
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Перевод в валюте",
+                            "id": "currency_transfer",
+                            "chipParams": {
+                                "intentName": "card_transfer_info",
+                                "payload": {
+                                    "entities": {
+                                        "currency": "Валюта"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "chips",
+                        "body": {
+                            "text": "Другой вопрос",
+                            "id": "another_question_chips",
+                            "chipParams": {
+                                "intentName": "another_question_intent"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "version": 3
+    },
+    "transferReason": null,
+    "recommendations": false,
+    "state": "/Commissions/Transfees",
+    "channelTo": null,
+    "profileName": "am_maffluent"
+}
